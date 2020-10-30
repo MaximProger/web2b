@@ -210,8 +210,6 @@ img {
   }
 
   &--enter {
-    font-weight: 500;
-
     &:hover {
       border-color: transparent;
       opacity: 0.7;
@@ -319,7 +317,7 @@ img {
 
 // About
 .about {
-  height: 790px;
+  height: 663px;
   background: url("../img/main/about__bg.svg") no-repeat center;
   background-size: cover;
   display: flex;
@@ -621,7 +619,7 @@ img {
   padding-bottom: 39px;
   font-family: Futura PT;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 20px;
   line-height: 26px;
   color: #ffffff;

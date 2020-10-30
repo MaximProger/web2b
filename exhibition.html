@@ -26,9 +26,8 @@
           <div class="nav__wrapper">
             <a href="#" class="nav__link">Выставочная платформа</a>
             <a href="#" class="nav__link">Онлайн офис</a>
-            <a href="#" class="nav__link">О проекте</a>
-            <a href="#" class="nav__link">Контакты</a>
-            <a href="#" class="nav__link nav__link--enter"><b>Войти</b></a>
+            <a href="/#about" class="nav__link">О проекте</a>
+            <a href="#footer" class="nav__link">Контакты</a>
           </div>
         </nav>
       </div>
@@ -311,6 +310,17 @@
           <div class="help__inner">
             <div class="help__content">
               <h2 class="help__title">Получить консультацию</h2>
+              <div class="radio__wrapper">
+                <div class="radio__item">
+                  <input type="radio" class="radio" name="radio" id="radio-1">
+                  <label class="radio__text" for="radio-1">Выстовочная платформа</label>
+                </div>
+
+                <div class="radio__item">
+                  <input type="radio" class="radio" name="radio" id="radio-2" checked>
+                  <label for="radio-2" class="radio__text">Онлайн офис</label>
+                </div>
+              </div>
               <p class="help__description">
                 Оставьте заявку прямо сейчас<br>
                 и мы Вам перезвоним.
@@ -320,11 +330,11 @@
               <div class="form__fields">
                 <div class="form__item">
                   <label for="name" class="form__label">Ваше имя</label>
-                  <input id="name" type="text" class="form__input" required>
+                  <input id="name" type="text" class="form__input" placeholder="Иван Иванов" required>
                 </div>
                 <div class="form__item">
                   <label for="phone" class="form__label">Ваш телефон</label>
-                  <input id="phone" type="tel" class="form__input" required>
+                  <input id="phone" type="tel" class="form__input" placeholder="8 800 555 35 35" required>
                 </div>
               </div>
               <button class="form__btn" type="submit">Отправить</button>
@@ -335,7 +345,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__left">
@@ -362,11 +372,10 @@
           </div>
           <div class="footer__contacts">
             <div class="footer__phone">
-              Телефон 8 800 000 00 00
+              Телефон 8 800 100 65 99
             </div>
             <div class="footer__email">
               info@web2b.co
-              web2b.co
             </div>
           </div>
         </div>

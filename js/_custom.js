@@ -26,9 +26,11 @@ $(document).ready(function () {
     focusOnSelect: true,
   });
 
-  // Убирает маску у видео
+  // Убирает маску и запустить видео
   $(".video__wrapper").click(function () {
-    $(".vedio__mask").hide();
+    $(".vedio__mask").remove();
+    $("#video").get(0).play();
+    $("#video").attr("controls", "controls");
   });
 
   // Табуляция в тарифах
