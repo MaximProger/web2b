@@ -9,42 +9,40 @@ $(document).ready(function () {
   // Маска для инпута (телефон)
   $("#phone").mask("9 999 999 99 99");
 
-  // Слайдер
-  $("#sliderFunctions").not(".slick-initialized").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    arrows: false,
-    asNavFor: "#navFunctions",
+  // Burger Menu
+  $("#burger").on("click", function () {
+    $(this).toggleClass("active");
+    $("#nav").toggleClass("active");
+    $("#mask").toggleClass("active");
   });
 
-  // Навигация для слайдера
-  $("#navFunctions").not(".slick-initialized").slick({
-    arrows: false,
-    slidesToShow: 4,
-    asNavFor: "#sliderFunctions",
-    focusOnSelect: true,
+  $(window).resize(function () {
+    if ($(window).width() <= "767") {
+      // Слайдер
+      $("#newsSlider").not(".slick-initialized").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        centerMode: true,
+        autoplay: false,
+        arrows: false,
+        asNavFor: "#navNews",
+      });
+
+      // Навигация для слайдера
+      $("#navNews").not(".slick-initialized").slick({
+        arrows: false,
+        slidesToShow: 2,
+        asNavFor: "#newsSlider",
+        focusOnSelect: true,
+      });
+
+      // Меняем placeholder в форме
+      $("#name").attr("placeholder", "Ваше имя");
+      $("#phone").attr("placeholder", "Ваш телефон");
+    }
   });
 
-  // Убирает маску и запустить видео
-  $(".video__wrapper").click(function () {
-    $(".vedio__mask").remove();
-    $("#video").get(0).play();
-    $("#video").attr("controls", "controls");
-  });
-
-  // Табуляция в тарифах
-  $("#costBtn-1").click(function () {
-    $(".cost__top__btn").removeClass("active");
-    $(".cost__wrapper").removeClass("active");
-    $(this).addClass("active");
-    $("#costList-1").addClass("active");
-  });
-
-  $("#costBtn-2").click(function () {
-    $(".cost__top__btn").removeClass("active");
-    $(".cost__wrapper").removeClass("active");
-    $(this).addClass("active");
-    $("#costList-2").addClass("active");
-  });
+  // вызовем событие resize
+  $(window).resize();
 });

@@ -6,6 +6,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<!-- Slick -->
+	<link rel="stylesheet" href="./css/include/slick.css">
+
 	<!-- Styles -->
 	<link rel="stylesheet" href="./css/styles.min.css">
 	<title>Web2b</title>
@@ -19,11 +22,12 @@
 				<a href="/" class="logo__link">
 					<img src="./img/logo.svg" alt="Web2b" class="logo">
 				</a>
-				<nav class="nav">
+				<span class="header__burger no-xl md" id="burger"></span>
+				<nav class="nav" id="nav">
 					<div class="nav__wrapper">
-						<a href="#" class="nav__link">Выставочная платформа</a>
-						<a href="#" class="nav__link">Онлайн офис</a>
-						<a href="#about" class="nav__link">О проекте</a>
+						<a href="#" class="nav__link">Выставочная<br class="no-xl md">платформа</a>
+						<a href="#" class="nav__link active">Онлайн офис</a>
+						<a href="/#about" class="nav__link">О проекте</a>
 						<a href="#footer" class="nav__link">Контакты</a>
 					</div>
 				</nav>
@@ -48,26 +52,28 @@
 			<div class="container">
 				<div class="capa__inner">
 					<div class="capa__item">
-						<div class="capa__suptitle">ВЫСТАВОЧНАЯ ПЛАТФОРМА</div>
-						<h2 class="capa__title">БЕЗГРАНИЧНЫЕ<br> ВОЗМОЖНОСТИ ДЛЯ<br> ВАШЕГО МЕРОПРИЯТИЯ</h2>
+						<div class="capa__suptitle">ВЫСТАВОЧНАЯ<br class="no-xl xs">ПЛАТФОРМА</div>
+						<h2 class="capa__title">БЕЗГРАНИЧНЫЕ<br> ВОЗМОЖНОСТИ <br class="no-xl xs">ДЛЯ<br class="no-xs"> ВАШЕГО<br
+								class="no-xl xs">
+							МЕРОПРИЯТИЯ</h2>
 						<a href="#" class="capa__btn">подробнее</a>
 					</div>
 
 					<div class="capa__item">
 						<div class="capa__suptitle">ОНЛАЙН ОФИС</div>
-						<h2 class="capa__title">БЫСТРЫЕ И ПРОСТЫЕ<br> СДЕЛКИ С КЛИЕНТАМИ</h2>
+						<h2 class="capa__title">БЫСТРЫЕ <br class="no-xl xs">И ПРОСТЫЕ<br> СДЕЛКИ С КЛИЕНТАМИ</h2>
 						<a href="#" class="capa__btn">подробнее</a>
 					</div>
 				</div>
 			</div>
-			<!-- <img src="./img/main/capa.svg" alt="Background" class="capa__bg"> -->
 		</section>
 
 		<section class="about" id="about">
 			<div class="container">
+				<h2 class="about__title no-xl xs">О ПРОЕКТЕ WEB2B</h2>
 				<div class="about__inner">
 					<div class="about__content">
-						<h2 class="about__title">О ПРОЕКТЕ WEB2B</h2>
+						<h2 class="about__title no-xs">О ПРОЕКТЕ WEB2B</h2>
 						<p class="about__text">
 							Команда Web2b совсем не новички в бизнесе – мы хорошо знакомы с его законами, рутиной и знаем об
 							ограничениях, которые могут тормозить его рост . Нам так же как и Вам пришлось адаптироваться к новым
@@ -91,9 +97,12 @@
 		<section class="news">
 			<div class="container">
 				<h2 class="news__title">АКТУАЛЬНЫЕ НОВОСТИ В DIGITAL СФЕРЕ</h2>
-				<div class="news__inner">
+				<div class="news__inner" id="newsSlider">
 					<div class="news__item">
-						<img src="./img/main/news-1.jpg" alt="News" class="news__img">
+						<picture>
+							<source srcset="./img/main/news-1--mobile.jpg" media="(max-width: 1199px)" />
+							<img src="./img/main/news-1.jpg" alt="News" class="news__img" />
+						</picture>
 						<h3 class="news__item__title">Заголовок новости</h3>
 						<p class="news__description">Команда Web2b совсем не новички в бизнесе – мы хорошо знакомы с его законами,
 							рутиной и знаем об ограничениях, которые могут тормозить его рост . Нам так же как и Вам </p>
@@ -101,11 +110,24 @@
 					</div>
 
 					<div class="news__item">
-						<img src="./img/main/news-2.jpg" alt="News" class="news__img">
+						<picture>
+							<source srcset="./img/main/news-2--mobile.jpg" media="(max-width: 1199px)" />
+							<img src="./img/main/news-2.jpg" alt="News" class="news__img" />
+						</picture>
 						<h3 class="news__item__title">Заголовок новости</h3>
 						<p class="news__description">Команда Web2b совсем не новички в бизнесе – мы хорошо знакомы с его законами,
 							рутиной и знаем об ограничениях, которые могут тормозить его рост . Нам так же как и Вам </p>
 						<a href="#" class="news__link">подробнее</a>
+					</div>
+				</div>
+				<div class="slider__nav slider__nav--news no-xl xs">
+					<div class="slider__nav__wrapper" id="navNews">
+						<div class="slider__nav__item">
+							<span></span>
+						</div>
+						<div class="slider__nav__item">
+							<span></span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -159,7 +181,7 @@
 					<a href="/" class="logo__link">
 						<img src="./img/logo-white.svg" alt="Web2b" class="logo">
 					</a>
-					<p class="footer__address">
+					<p class="footer__address no-xs">
 						набережная Пресненская,<br>
 						д. 12,
 						кв./оф. 6-3, г. Москва.
@@ -177,7 +199,7 @@
 							<img src="./img/fa.svg" alt="facebook">
 						</a>
 					</div>
-					<div class="footer__contacts">
+					<div class="footer__contacts no-xs">
 						<div class="footer__phone">
 							Телефон 8 800 100 65 99
 						</div>
@@ -187,14 +209,34 @@
 					</div>
 				</div>
 			</div>
+			<div class="footer__botton no-xl xs">
+				<p class="footer__address">
+					набережная Пресненская,<br>
+					д. 12,
+					кв./оф. 6-3, г. Москва.
+				</p>
+				<div class="footer__contacts">
+					<div class="footer__phone">
+						Телефон 8 800 100 65 99
+					</div>
+					<div class="footer__email">
+						info@web2b.co
+					</div>
+				</div>
+			</div>
 		</div>
 	</footer>
+
+	<div class="mask" id="mask"></div>
 
 	<!-- jQuery -->
 	<script src="./js/include/jquery.min.js"></script>
 
 	<!-- jQuery maskedinput -->
 	<script src="./js/include/jquery.maskedinput.min.js"></script>
+
+	<!-- Slick -->
+	<script src="./js/include/slick.min.js"></script>
 
 	<!-- Custom JS -->
 	<script src="./js/scripts.min.js"></script>
