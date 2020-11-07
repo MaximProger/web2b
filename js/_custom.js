@@ -17,7 +17,7 @@ $(document).ready(function () {
   });
 
   $(window).resize(function () {
-    if ($(window).width() <= "767") {
+    if ($(window).width() <= "766") {
       // Слайдер
       $("#newsSlider").not(".slick-initialized").slick({
         slidesToShow: 1,

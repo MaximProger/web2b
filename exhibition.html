@@ -22,12 +22,14 @@
         <a href="/" class="logo__link">
           <img src="./img/logo.svg" alt="Web2b" class="logo">
         </a>
-        <nav class="nav">
+        <span class="header__burger no-xl md" id="burger"></span>
+        <nav class="nav" id="nav">
           <div class="nav__wrapper">
-            <a href="#" class="nav__link">Выставочная платформа</a>
-            <a href="#" class="nav__link">Онлайн офис</a>
+            <a href="#" class="nav__link">Выставочная<br class="no-xl md">платформа</a>
+            <a href="#" class="nav__link active">Онлайн офис</a>
             <a href="/#about" class="nav__link">О проекте</a>
             <a href="#footer" class="nav__link">Контакты</a>
+            <a href="#" class="nav__link nav__link--enter"><b>Войти</b></a>
           </div>
         </nav>
       </div>
@@ -38,9 +40,10 @@
 
     <section class="evolution">
       <div class="container">
+        <h1 class="evolution__title no-xl md">ЭВОЛЮЦИЯ ВЫСТАВОЧНОЙ ОТРАСЛИ</h1>
         <div class="evolution__inner">
           <div class="evolution__content">
-            <h1 class="evolution__title">ЭВОЛЮЦИЯ ВЫСТАВОЧНОЙ ОТРАСЛИ</h1>
+            <h1 class="evolution__title no-md">ЭВОЛЮЦИЯ ВЫСТАВОЧНОЙ ОТРАСЛИ</h1>
             <p class="evolution__description">
               Используй цифровые возможности для безграничного расширения аудитории и географии мероприятия
             </p>
@@ -48,11 +51,9 @@
           </div>
           <div class="evolution__video">
             <div class="video__wrapper">
-              <!-- Для настоящего видео, задать класс video -->
-              <div class="video">
-                <!-- Заглушку удалить -->
-                <img class="video__placeholder" src="./img/exhibition/video.jpg" alt="Video">
-              </div>
+              <video class="video" id="video">
+                <source src="./videos/Web2B_02.mp4" type="video/mp4">
+              </video>
               <div class="vedio__mask">
                 <img src="./img/exhibition/play.svg" alt="Play" class="video__play">
               </div>
@@ -74,9 +75,10 @@
                   ВОЗМОЖНОСТИ ОНЛАЙН ДИАЛОГА
                 </p>
               </div>
+              <h3 class="slider__subtitle no-xl xs">Трансляции конференций</h3>
               <div class="slider__bot">
                 <div class="slider__content">
-                  <h3 class="slider__subtitle">Трансляции конференций</h3>
+                  <h3 class="slider__subtitle no-xs">Трансляции конференций</h3>
                   <ul class="slider__list">
                     <li class="slider__list__item">- Онлайн+офлайн форматы</li>
                     <li class="slider__list__item">- 8 спикеров</li>
@@ -99,9 +101,10 @@
                   ВОЗМОЖНОСТИ ОНЛАЙН ДИАЛОГА
                 </p>
               </div>
+              <h3 class="slider__subtitle no-xl xs">Личный кабинет организатора</h3>
               <div class="slider__bot">
                 <div class="slider__content">
-                  <h3 class="slider__subtitle">Личный кабинет организатора</h3>
+                  <h3 class="slider__subtitle no-xs">Личный кабинет организатора</h3>
                   <ul class="slider__list">
                     <li class="slider__list__item">- управление программой выставочных мероприятий</li>
                     <li class="slider__list__item">- управление стендами экспонентов</li>
@@ -122,9 +125,10 @@
                   ВОЗМОЖНОСТИ ОНЛАЙН ДИАЛОГА
                 </p>
               </div>
+              <h3 class="slider__subtitle no-xl xs">Онлайн магазин экспонента</h3>
               <div class="slider__bot">
                 <div class="slider__content">
-                  <h3 class="slider__subtitle">Онлайн магазин экспонента</h3>
+                  <h3 class="slider__subtitle no-xs">Онлайн магазин экспонента</h3>
                   <ul class="slider__list">
                     <li class="slider__list__item">- ЭДО</li>
                     <li class="slider__list__item">- удобная загрузка каталогов</li>
@@ -143,9 +147,10 @@
                   ВОЗМОЖНОСТИ ОНЛАЙН ДИАЛОГА
                 </p>
               </div>
+              <h3 class="slider__subtitle no-xl xs">Трансляции конференций</h3>
               <div class="slider__bot">
                 <div class="slider__content">
-                  <h3 class="slider__subtitle">Трансляции конференций</h3>
+                  <h3 class="slider__subtitle no-xs">Трансляции конференций</h3>
                   <ul class="slider__list">
                     <li class="slider__list__item">- видео/аудио звонки до 5 человек одновременно</li>
                     <li class="slider__list__item">- онлайн переговорная до 25 человек</li>
@@ -230,7 +235,7 @@
     <section class="tarifs">
       <div class="container">
         <h2 class="tarifs__title">Тарифы платформы</h2>
-        <div class="tarifs__inner">
+        <div class="tarifs__inner" id="tarifsSlider">
           <div class="tarifs__item">
             <div class="tarifs__item__wrapper">
               <h4 class="tarifs__item__title">БАЗОВЫЙ ПАКЕТ</h4>
@@ -301,6 +306,16 @@
             <a href="#" class="tarifs__btn">Заполнить бриф для расчета стоимости</a>
           </div>
         </div>
+        <div class="slider__nav slider__nav--news no-xl xs">
+          <div class="slider__nav__wrapper" id="navTarifs">
+            <div class="slider__nav__item">
+              <span></span>
+            </div>
+            <div class="slider__nav__item">
+              <span></span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -310,17 +325,6 @@
           <div class="help__inner">
             <div class="help__content">
               <h2 class="help__title">Получить консультацию</h2>
-              <div class="radio__wrapper">
-                <div class="radio__item">
-                  <input type="radio" class="radio" name="radio" id="radio-1">
-                  <label class="radio__text" for="radio-1">Выстовочная платформа</label>
-                </div>
-
-                <div class="radio__item">
-                  <input type="radio" class="radio" name="radio" id="radio-2" checked>
-                  <label for="radio-2" class="radio__text">Онлайн офис</label>
-                </div>
-              </div>
               <p class="help__description">
                 Оставьте заявку прямо сейчас<br>
                 и мы Вам перезвоним.
@@ -352,7 +356,7 @@
           <a href="/" class="logo__link">
             <img src="./img/logo-white.svg" alt="Web2b" class="logo">
           </a>
-          <p class="footer__address">
+          <p class="footer__address no-xs">
             набережная Пресненская,<br>
             д. 12,
             кв./оф. 6-3, г. Москва.
@@ -370,7 +374,7 @@
               <img src="./img/fa.svg" alt="facebook">
             </a>
           </div>
-          <div class="footer__contacts">
+          <div class="footer__contacts no-xs">
             <div class="footer__phone">
               Телефон 8 800 100 65 99
             </div>
@@ -380,8 +384,26 @@
           </div>
         </div>
       </div>
+      <div class="footer__botton no-xl xs">
+        <p class="footer__address">
+          набережная Пресненская,<br>
+          д. 12,
+          кв./оф. 6-3, г. Москва.
+        </p>
+        <div class="footer__contacts">
+          <div class="footer__phone">
+            Телефон 8 800 100 65 99
+          </div>
+          <div class="footer__email">
+            info@web2b.co
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
+
+  <!-- Mask for bloor -->
+  <div class="mask" id="mask"></div>
 
   <!-- jQuery -->
   <script src="./js/include/jquery.min.js"></script>
