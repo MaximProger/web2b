@@ -37,6 +37,12 @@ $(document).ready(function () {
         focusOnSelect: true,
       });
 
+      $(".nav__link").click(function () {
+        $("#burger").removeClass("active");
+        $("#nav").removeClass("active");
+        $("#mask").removeClass("active");
+      });
+
       // Меняем placeholder в форме
       $("#name").attr("placeholder", "Ваше имя");
       $("#phone").attr("placeholder", "Ваш телефон");
